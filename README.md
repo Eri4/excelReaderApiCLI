@@ -14,12 +14,12 @@ The -g option tells npm to install the package globally and you can acces the cl
 
 ## Usage
 
-# Assume data.xlsx contains the following data:
-# name, date_of_birth, address, phone_number
-# John Doe, 1990-01-01, 123 Main St, 555-5555
+Assume data.xlsx contains the following data:
+name, date_of_birth, address, phone_number
+John Doe, 1990-01-01, 123 Main St, 555-5555
 
 'node dist/index.js --file data.xlsx --apikey your-api-key'
 
 # Output:
-# Successfully uploaded 1 participant(s) to the API.
+Successfully uploaded 1 participant(s) to the API.
 
