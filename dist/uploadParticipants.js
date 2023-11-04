@@ -29,8 +29,13 @@ function uploadParticipants(participants, apiKey) {
         // }
         //this is for batch uploads
         try {
-            yield axios_1.default.post(url, participants, { headers });
-            console.log(`Uploaded ${participants.length} participants`);
+            const response = yield axios_1.default.post(url, participants, { headers });
+            if (response.status >= 200 && response.status < 300) {
+                console.log(`Uploaded ${participants.length} participants`);
+            }
+            else {
+                console.error('Failed to upload participants:', response.status, response.data);
+            }
         }
         catch (error) {
             console.error('Failed to upload participants:', error);

@@ -16,8 +16,12 @@ export async function uploadParticipants(participants: Participant[], apiKey: st
     // }
     //this is for batch uploads
     try {
-        await axios.post(url, participants, { headers });
-        console.log(`Uploaded ${participants.length} participants`);
+        const response = await axios.post(url, participants, { headers });
+        if (response.status >= 200 && response.status < 300) {
+            console.log(`Uploaded ${participants.length} participants`);
+        } else {
+            console.error('Failed to upload participants:', response.status, response.data);
+        }
     } catch (error) {
         console.error('Failed to upload participants:', error);
     }
