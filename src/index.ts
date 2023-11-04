@@ -10,13 +10,6 @@ import * as fs from 'fs';
 const program = new Command();
 console.log(figlet.textSync("Excel Reader Api CLI"));
 
-interface Participant {
-    name: string;
-    date_of_birth: string;
-    address: string;
-    phone_number: string;
-}
-
 program
     .version("1.0.0")
     .description("A test form NRC to make a cli that reads a excel and calls a api")
