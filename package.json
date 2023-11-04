@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "bin": {
-    "dirmanager": "./dist/index.js"
+    "excelreaderapicli": "./dist/index.js"
   },
   "dependencies": {
     "axios": "^1.6.0",
